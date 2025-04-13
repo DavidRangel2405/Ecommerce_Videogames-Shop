@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pago - MiTienda</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MiTienda</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="search.html">Buscar</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="profile.html">Perfil</a></li>
+        <li><a href="login.html" onclick="logout()">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="checkout-section">
+      <h2>Resumen de tu orden</h2>
+      <div id="checkoutItems" class="checkout-items"></div>
+      <div class="checkout-summary">
+        <p>Total: <span id="checkoutTotal">$0.00</span></p>
+        <h3>Información de pago</h3>
+        <form id="paymentForm" onsubmit="completeOrder(event)">
+          <div class="form-group">
+            <label for="cardNumber">Número de tarjeta</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 1234 5678" required />
+          </div>
+          <div class="form-group">
+            <label for="expiryDate">Fecha de expiración</label>
+            <input type="month" id="expiryDate" required />
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required />
+          </div>
+          <button type="submit" class="checkout-btn">Pagar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      renderCheckout(cart);
+    });
+
+    function renderCheckout(cart) {
+      const checkoutItemsContainer = document.getElementById("checkoutItems");
+      const checkoutTotal = document.getElementById("checkoutTotal");
+
+      checkoutItemsContainer.innerHTML = "";
+      let total = 0;
+
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+
+        const itemCard = document.createElement("div");
+        itemCard.className = "checkout-item";
+        itemCard.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" class="checkout-item-image">
+          <div class="checkout-item-details">
+            <h3>${item.name}</h3>
+            <p>Cantidad: ${item.quantity}</p>
+            <p>Precio: $${(item.price * item.quantity).toFixed(2)}</p>
+          </div>
+        `;
+        checkoutItemsContainer.appendChild(itemCard);
+      });
+
+      checkoutTotal.textContent = `$${total.toFixed(2)}`;
+    }
+
+    function completeOrder(event) {
+      event.preventDefault();
+
+      const cardNumber = document.getElementById("cardNumber").value;
+      const expiryDate = document.getElementById("expiryDate").value;
+      const cvv = document.getElementById("cvv").value;
+
+      if (cardNumber && expiryDate && cvv) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        localStorage.removeItem("cart"); // Limpiar el carrito
+
+        alert("¡Compra completada con éxito! Te enviaremos un correo de confirmación.");
+        window.location.href = "index.html"; // Redirigir a la página de inicio
+      } else {
+        alert("Por favor, completa todos los campos de pago.");
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedUser");
+      alert("Has cerrado sesión exitosamente.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

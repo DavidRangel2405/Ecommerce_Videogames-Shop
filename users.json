@@ -1,0 +1,13 @@
+[
+    {
+      "name": "Cliente Ejemplo",
+      "email": "cliente@correo.com",
+      "password": "12345"
+    },
+    {
+      "name": "Maria López",
+      "email": "maria@example.com",
+      "password": "mypass123"
+    }
+  ]
+  

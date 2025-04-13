@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buscar - MiTienda</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MiTienda</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="search.html">Buscar</a></li>
+        <li><a href="cart.html">Carrito</a></li>
+        <li><a href="profile.html">Perfil</a></li>
+        <li><a href="login.html" onclick="logout()">Cerrar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <h2>Buscar productos</h2>
+      <input type="text" id="searchInput" placeholder="Escribe para buscar..." oninput="searchProducts()" />
+      <div id="searchResults" class="search-results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MiTienda. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    let products = [];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("products.json")
+        .then(res => res.json())
+        .then(data => {
+          products = data;
+          renderProducts(products);
+        });
+    });
+
+    function searchProducts() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(query) || product.description.toLowerCase().includes(query)
+      );
+      renderProducts(filteredProducts);
+    }
+
+    function renderProducts(filteredProducts) {
+      const container = document.getElementById("searchResults");
+      container.innerHTML = "";
+
+      filteredProducts.forEach(product => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+          <img src="${product.image}" alt="${product.name}" class="product-image">
+          <div class="product-details">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <div class="product-price">$${product.price.toFixed(2)}</div>
+            <button class="add-to-cart-btn" onclick="addToCart(${product.id})">Agregar al carrito</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function addToCart(productId) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const item = products.find(p => p.id === productId);
+      const itemInCart = cart.find(p => p.id === productId);
+
+      if (itemInCart) {
+        itemInCart.quantity += 1;
+      } else {
+        cart.push({ ...item, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${item.name} se agregó al carrito`);
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedUser");
+      alert("Has cerrado sesión exitosamente.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

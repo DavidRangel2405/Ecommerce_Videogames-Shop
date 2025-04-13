@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiTienda Gamer - Juegos para PC</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-white">
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-danger" href="index.html">Esencia Épica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catálogo
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Aventura</a></li>
+              <li><a class="dropdown-item" href="#">RPG</a></li>
+              <li><a class="dropdown-item" href="#">Deportes</a></li>
+              <li><a class="dropdown-item" href="#">Simulación</a></li>
+            </ul>
+          </li>
+          <li class="nav-item" id="nav-perfil" style="display: none;">
+            <a class="nav-link" href="profile.html">Perfil</a>
+          </li>
+          <li class="nav-item" id="nav-login" style="display: none;">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Carrito</a></li>
+        </ul>
+        <form class="d-flex ms-lg-4">
+          <input class="form-control me-2" type="search" placeholder="Buscar juegos" aria-label="Buscar">
+          <button class="btn btn-outline-danger" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Explora los mejores juegos de PC</h1>
+      <p>Ofertas diarias, grandes títulos, descuentos y lanzamientos exclusivos</p>
+    </div>
+  </section>
+
+  <!-- Carrusel de juegos destacados -->
+  <section class="container my-5">
+    <h2 class="text-center text-danger mb-4">Juegos Destacados</h2>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner" id="carousel-items">
+        <!-- Los elementos del carrusel se cargarán aquí -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Recomendados para ti -->
+  <section class="game-section container">
+    <h2 class="text-center text-danger">Recomendados para ti</h2>
+    <div class="row" id="recommended-games">
+      <!-- Tarjetas de juegos -->
+    </div>
+  </section>
+
+  <!-- Nuevos lanzamientos -->
+  <section class="game-section bg-dark text-white">
+    <div class="container">
+      <h2 class="text-center">Nuevos Lanzamientos</h2>
+      <div class="row" id="new-releases">
+        <!-- Tarjetas de nuevos lanzamientos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p>&copy; 2025 MiTienda Gamer. Todos los derechos reservados.</p>
+    <small>Síguenos en <a href="#" class="text-danger">@MiTiendaGamer</a></small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="loadData.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

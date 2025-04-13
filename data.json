@@ -1,0 +1,48 @@
+{
+  "recommendedGames": [
+    {
+      "title": "Cyberpunk 2077",
+      "image": "assets/games/cyberpunk2077.jpg",
+      "description": "Sumérgete en un mundo futurista lleno de acción y decisiones difíciles.",
+      "price": "$29.99",
+      "link": "product.html?id=1"
+    },
+    {
+      "title": "Elden Ring",
+      "image": "assets/games/eldenring.jpg",
+      "description": "Explora un mundo oscuro y fantástico lleno de desafíos épicos.",
+      "price": "$59.99",
+      "link": "product.html?id=2"
+    },
+    {
+      "title": "Valorant",
+      "image": "assets/games/valorant.jpg",
+      "description": "FPS competitivo con habilidades y táctica al más alto nivel.",
+      "price": "Gratis",
+      "link": "product.html?id=3"
+    }
+  ],
+  "newReleases": [
+    {
+      "title": "Starfield",
+      "image": "assets/games/starfield.jpg",
+      "description": "Viaja por el espacio y descubre nuevos mundos en esta aventura galáctica.",
+      "price": "$69.99",
+      "link": "product.html?id=4"
+    },
+    {
+      "title": "Assassin's Creed Mirage",
+      "image": "assets/games/acmirage.jpg",
+      "description": "Regresa a los orígenes del sigilo en esta nueva entrega de la saga.",
+      "price": "$49.99",
+      "link": "product.html?id=5"
+    },
+    {
+      "title": "Hogwarts Legacy",
+      "image": "assets/games/hogwartslegacy.jpg",
+      "description": "Explora el mundo mágico en una aventura ambientada en el siglo XIX.",
+      "price": "$59.99",
+      "link": "product.html?id=6"
+    }
+  ]
+}
