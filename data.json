@@ -1,48 +1,166 @@
 {
   "recommendedGames": [
     {
+      "id": 1,
       "title": "Cyberpunk 2077",
       "image": "assets/games/cyberpunk2077.jpg",
       "description": "Sumérgete en un mundo futurista lleno de acción y decisiones difíciles.",
-      "price": "$29.99",
-      "link": "product.html?id=1"
+      "price": 29.99,
+      "link": "product.html?id=1",
+      "genre": "Acción, Aventura",
+      "platform": "PC",
+      "minRequirements": "8GB RAM, 30GB de espacio disponible, Tarjeta gráfica: Nvidia GTX 780",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.5,
+        "totalReviews": 200
+      }
     },
     {
+      "id": 2,
       "title": "Elden Ring",
       "image": "assets/games/eldenring.jpg",
       "description": "Explora un mundo oscuro y fantástico lleno de desafíos épicos.",
-      "price": "$59.99",
-      "link": "product.html?id=2"
+      "price": 59.99,
+      "link": "product.html?id=2",
+      "genre": "Aventura, RPG",
+      "platform": "PC",
+      "minRequirements": "16GB RAM, 40GB de espacio disponible, Tarjeta gráfica: Nvidia GTX 1060",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.8,
+        "totalReviews": 320
+      }
     },
     {
+      "id": 3,
       "title": "Valorant",
       "image": "assets/games/valorant.jpg",
       "description": "FPS competitivo con habilidades y táctica al más alto nivel.",
       "price": "Gratis",
-      "link": "product.html?id=3"
+      "link": "product.html?id=3",
+      "genre": "Acción, RPG",
+      "platform": "PC",
+      "minRequirements": "4GB RAM, 8GB de espacio disponible, Tarjeta gráfica: Intel HD 3000",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.2,
+        "totalReviews": 500
+      }
+    },
+    {
+      "id": 4,
+      "title": "Starfield",
+      "image": "assets/games/starfield.jpg",
+      "description": "Viaja por el espacio y descubre nuevos mundos en esta aventura galáctica.",
+      "price": 69.99,
+      "link": "product.html?id=4",
+      "genre": "Aventura, Simulación",
+      "platform": "PC",
+      "minRequirements": "16GB RAM, 50GB de espacio disponible, Tarjeta gráfica: Nvidia RTX 2070",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.2,
+        "totalReviews": 150
+      }
+    },
+    {
+      "id": 5,
+      "title": "Assassin's Creed Mirage",
+      "image": "assets/games/acmirage.jpg",
+      "description": "Regresa a los orígenes del sigilo en esta nueva entrega de la saga.",
+      "price": 49.99,
+      "link": "product.html?id=5",
+      "genre": "Acción, Aventura",
+      "platform": "PC",
+      "minRequirements": "12GB RAM, 40GB de espacio disponible, Tarjeta gráfica: Nvidia GTX 1080",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.6,
+        "totalReviews": 200
+      }
+    },
+    {
+      "id": 6,
+      "title": "Hogwarts Legacy",
+      "image": "assets/games/hogwartslegacy.jpg",
+      "description": "Explora el mundo mágico en una aventura ambientada en el siglo XIX.",
+      "price": 59.99,
+      "link": "product.html?id=6",
+      "genre": "Acción, Aventura, RPG",
+      "platform": "PC",
+      "minRequirements": "8GB RAM, 30GB de espacio disponible, Tarjeta gráfica: Nvidia GTX 970",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.7,
+        "totalReviews": 420
+      }
+    },
+    {
+      "id": 7,
+      "title": "The Witcher 3: Wild Hunt",
+      "image": "assets/games/witcher3.jpg",
+      "description": "Vive una aventura épica como Geralt de Rivia, en busca de su hija adoptiva.",
+      "price": 19.99,
+      "link": "product.html?id=7",
+      "genre": "Acción, Aventura, RPG",
+      "platform": "PC",
+      "minRequirements": "8GB RAM, 35GB de espacio disponible, Tarjeta gráfica: Nvidia GTX 770",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.9,
+        "totalReviews": 800
+      }
     }
   ],
   "newReleases": [
     {
-      "title": "Starfield",
-      "image": "assets/games/starfield.jpg",
-      "description": "Viaja por el espacio y descubre nuevos mundos en esta aventura galáctica.",
-      "price": "$69.99",
-      "link": "product.html?id=4"
+      "id": 8,
+      "title": "Final Fantasy XVI",
+      "image": "assets/games/ffxvi.jpg",
+      "description": "La última entrega de la épica saga Final Fantasy, llena de acción y magia.",
+      "price": 69.99,
+      "link": "product.html?id=8",
+      "genre": "Acción, Aventura, RPG",
+      "platform": "PC",
+      "minRequirements": "16GB RAM, 70GB de espacio disponible, Tarjeta gráfica: Nvidia RTX 3080",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.7,
+        "totalReviews": 380
+      }
     },
     {
-      "title": "Assassin's Creed Mirage",
-      "image": "assets/games/acmirage.jpg",
-      "description": "Regresa a los orígenes del sigilo en esta nueva entrega de la saga.",
-      "price": "$49.99",
-      "link": "product.html?id=5"
+      "id": 9,
+      "title": "Spider-Man 2",
+      "image": "assets/games/spiderman2.jpg",
+      "description": "Aventura de acción con Spider-Man y Miles Morales, en el universo de Marvel.",
+      "price": 59.99,
+      "link": "product.html?id=9",
+      "genre": "Acción, Aventura",
+      "platform": "PC",
+      "minRequirements": "16GB RAM, 50GB de espacio disponible, Tarjeta gráfica: Nvidia RTX 2080",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.9,
+        "totalReviews": 500
+      }
     },
     {
-      "title": "Hogwarts Legacy",
-      "image": "assets/games/hogwartslegacy.jpg",
-      "description": "Explora el mundo mágico en una aventura ambientada en el siglo XIX.",
-      "price": "$59.99",
-      "link": "product.html?id=6"
+      "id": 10,
+      "title": "FIFA 23",
+      "image": "assets/games/fifa23.jpg",
+      "description": "La última entrega del fútbol más realista, con equipos y ligas internacionales.",
+      "price": 49.99,
+      "link": "product.html?id=10",
+      "genre": "Deportes, Simulación",
+      "platform": "PC",
+      "minRequirements": "8GB RAM, 50GB de espacio disponible, Tarjeta gráfica: Nvidia GTX 1060",
+      "availability": "En stock",
+      "reviews": {
+        "rating": 4.3,
+        "totalReviews": 120
+      }
     }
   ]
 }

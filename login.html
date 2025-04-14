@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - MiTienda Gamer</title>
+  <title>Login - Esencia Épica</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- FontAwesome -->
@@ -15,20 +15,39 @@
 
 <body class="bg-dark text-white">
   <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark shadow">
     <div class="container-fluid">
-      <a class="navbar-brand text-danger" href="index.html">MiTienda Gamer</a>
+      <a class="navbar-brand text-danger fw-bold" href="index.html">🎮 Esencia Épica</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="cart.html">Carrito</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-th-large me-1"></i> Catálogo
+            </a>
+            <ul class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="category.html?genre=Acción"><i class="fas fa-bolt me-2 text-danger"></i>Acción</a></li>
+              <li><a class="dropdown-item" href="category.html?genre=Aventura"><i class="fas fa-hat-wizard me-2 text-info"></i>Aventura</a></li>
+              <li><a class="dropdown-item" href="category.html?genre=RPG"><i class="fas fa-dice-d20 me-2 text-warning"></i>RPG</a></li>
+              <li><a class="dropdown-item" href="category.html?genre=Deportes"><i class="fas fa-futbol me-2 text-success"></i>Deportes</a></li>
+              <li><a class="dropdown-item" href="category.html?genre=Simulación"><i class="fas fa-cogs me-2 text-primary"></i>Simulación</a></li>
+            </ul>
+          </li>          
+          <li class="nav-item" id="nav-user" style="display: none;">
+            <a class="nav-link" href="profile.html">
+              <i class="fas fa-user"></i> <span id="userNameDisplay"></span>
+            </a>
+          </li>
+          <li class="nav-item" id="nav-login">
+            <a class="nav-link" href="login.html">Iniciar sesión</a>
+          </li>
         </ul>
-        <form class="d-flex ms-lg-4">
-          <input class="form-control me-2" type="search" placeholder="Buscar juegos" aria-label="Buscar">
-          <button class="btn btn-outline-danger" type="submit">Buscar</button>
-        </form>
+        <div class="position-relative w-100" style="max-width: 290px;">
+          <input class="form-control bg-white text-dark border-danger" id="searchInput" type="search" placeholder="Buscar juegos" aria-label="Buscar">
+          <div id="searchDropdown" class="dropdown-menu show w-100 mt-1 shadow d-none"></div>
+        </div>   
       </div>
     </div>
   </nav>
@@ -36,7 +55,7 @@
   <!-- Hero Section -->
   <section class="hero text-center">
     <div class="container">
-      <h1>Bienvenido de nuevo a MiTienda Gamer</h1>
+      <h1>Bienvenido de nuevo a Esencia Épica</h1>
       <p>Inicia sesión para acceder a nuestros juegos exclusivos, ofertas y mucho más.</p>
     </div>
   </section>
@@ -58,13 +77,14 @@
 
   <!-- Footer -->
   <footer class="text-center py-4 bg-dark text-white">
-    <p>&copy; 2025 MiTienda Gamer. Todos los derechos reservados.</p>
-    <small>Síguenos en <a href="#" class="text-danger">@MiTiendaGamer</a></small>
+    <p>&copy; 2025 Esencia Épica. Todos los derechos reservados.</p>
+    <small>Síguenos en <a href="#" class="text-danger">@Esencia Épica</a></small>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="auth.js"></script>
+  <script src="search.js"></script>
 </body>
 
 </html>
