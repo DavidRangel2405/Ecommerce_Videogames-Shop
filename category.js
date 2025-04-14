@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <div class="card-body">
                     <h5 class="card-title">${game.title}</h5>
                     <p class="card-text">${game.description}</p>
-                    <p class="card-price fw-bold text-danger">${game.price}</p>
+                    <p class="card-price fw-bold text-danger">$${game.price}</p>
                     <a href="product.html?id=${game.id}" class="btn btn-outline-danger w-100">Ver más</a>
                   </div>
                 </div>

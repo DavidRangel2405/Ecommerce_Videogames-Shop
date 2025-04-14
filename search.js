@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${game.image}" alt="${game.title}">
             <div>
               <div class="fw-bold text-white">${game.title}</div>
-              <div class="text-danger">${game.price}</div>
+              <div class="text-danger">$${game.price}</div>
             </div>
           `;
           dropdown.appendChild(item);
