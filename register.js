@@ -36,6 +36,7 @@ function registerUser(e) {
     localStorage.setItem("loggedIn", "true");
     localStorage.setItem("userName", name);
     localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPassword", password);
   
     alert("Registro exitoso. ¡Bienvenido!");
     window.location.href = "index.html";

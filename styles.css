@@ -4,6 +4,12 @@
   transition: color 0.3s ease;
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #dc3545;
+  font-weight: bold;
+  border-bottom: 2px solid #dc3545;
+}
+
 /* Al pasar el cursor, cambia a rojo */
 .navbar-dark .nav-item.dropdown .nav-link:hover {
   color: #dc3545;
@@ -50,6 +56,7 @@
   color: white;
   border: 1px solid rgba(220, 53, 69, 0.7); /* Borde rojizo */
   border-radius: 0.5rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Cada ítem del dropdown */
@@ -322,6 +329,16 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.logout-link {
+  text-decoration: none;
+  font-weight: 500;
+  transition: text-decoration 0.2s ease;
+}
+
+.logout-link:hover {
+  text-decoration: underline;
+}
+
 
 /* CARRITO */
 .cart-card {
@@ -346,6 +363,22 @@ footer a:hover {
 
 .cart-card-body {
   padding: 1rem;
+}
+
+#cartCount {
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.8);
+}
+
+.btn-add-to-cart {
+  background-color: #dc3545;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #c82333;
 }
 
 .cart-card-footer {
