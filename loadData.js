@@ -87,7 +87,6 @@ function loadProductDetails(games, productId) {
       }
 
       localStorage.setItem("cart", JSON.stringify(cart));
-      updateCartCount(); // ACTUALIZA VISUALMENTE EL CONTADOR
       alert("Producto agregado al carrito");
     });
   }
