@@ -57,7 +57,12 @@
   border: 1px solid rgba(220, 53, 69, 0.7); /* Borde rojizo */
   border-radius: 0.5rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  top: 3.2rem;
+  position: absolute;
+  left: 0;
+  width: 100%;
 }
+
 
 /* Cada ítem del dropdown */
 #searchDropdown .dropdown-item {
