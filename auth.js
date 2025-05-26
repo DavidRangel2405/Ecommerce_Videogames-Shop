@@ -27,13 +27,13 @@ if (loginForm) {
       localStorage.setItem("loggedIn", "true");
       localStorage.setItem("userName", matchedUser.name);
       localStorage.setItem("userEmail", matchedUser.email);
+      localStorage.setItem("userPassword", matchedUser.password);  
       localStorage.setItem("loggedUser", JSON.stringify(matchedUser));
 
       alert("Inicio de sesión exitoso");
       window.location.href = "index.html";
-    } else {
-      alert("Credenciales incorrectas. Inténtalo de nuevo.");
     }
+
   });
 }
 
